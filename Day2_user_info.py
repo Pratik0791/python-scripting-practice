@@ -1,0 +1,11 @@
+print("Welcome to the User Info Collector")
+name = input("Enter your name: ")
+email = input("Enter your email: ")
+age = int(input("Enter your age: "))
+skills = input("Enter your top 3 skills (comma-separated): ").split(',')
+
+print("Profile Summary:")
+print("Name:", name)
+print("Email:", email)
+print("Age:", age)
+print("Skills:", skills)
