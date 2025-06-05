@@ -1,0 +1,15 @@
+from datetime import datetime
+
+log_file = "log.txt"
+
+# Collect 3 user messages
+for i in range(3):
+    message = input(f"Enter log message {i + 1}: ")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(log_file, "a") as f:
+        f.write(f"[{timestamp}] {message}\n")
+
+print("\n📝 All Log Entries:")
+with open(log_file, "r") as f:
+    for line in f:
+        print(line.strip())
