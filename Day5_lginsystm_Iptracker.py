@@ -56,13 +56,11 @@ def main() -> None:
     for ip in sorted(ip_counts):
         print(f"- {ip}")
 
-    print("\\nLogin attempts per IP:")
+    print("\nLogin attempts per IP:")
     for ip, count in sorted(ip_counts.items()):
         print(f"{ip}: {count}")
 
-    print(
-        f"\\nSuspicious IPs (more than {SUSPICIOUS_ATTEMPT_THRESHOLD} attempts):"
-    )
+    print(f"\nSuspicious IPs (more than {SUSPICIOUS_ATTEMPT_THRESHOLD} attempts):")
     if suspicious_ips:
         for ip in suspicious_ips:
             print(f"- {ip}")
@@ -70,7 +68,7 @@ def main() -> None:
         print("None")
 
     if invalid_rows:
-        print("\\nRows with missing or invalid IP addresses:")
+        print("\nRows with missing or invalid IP addresses:")
         for row_number in invalid_rows:
             print(f"- Row {row_number}")
 
